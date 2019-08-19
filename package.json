@@ -1,0 +1,53 @@
+{
+  "name": "sample-immer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "immer": "3.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.17",
+    "@typescript-eslint/eslint-plugin": "2.0.0",
+    "@typescript-eslint/parser": "2.0.0",
+    "acorn": "6.3.0",
+    "eslint": "6.2.0",
+    "eslint-config-xo": "0.26.0",
+    "eslint-config-xo-typescript": "0.17.0",
+    "eslint-plugin-jest": "22.15.1",
+    "jest": "24.9.0",
+    "prettier": "1.18.2",
+    "ts-jest": "24.0.2",
+    "typescript": "3.5.3",
+    "xo": "0.24.0"
+  },
+  "scripts": {
+    "format": "prettier --write **/*.ts **/*.json",
+    "test": "xo && jest"
+  },
+  "eslintConfig": {
+    "env": {
+      "jest/globals": true
+    },
+    "extends": [
+      "xo",
+      "xo-typescript",
+      "plugin:jest/recommended"
+    ],
+    "extensions": [
+      "ts"
+    ],
+    "plugins": [
+      "jest"
+    ]
+  },
+  "jest": {
+    "clearMocks": true,
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "xo": {
+    "prettier": true,
+    "space": true
+  }
+}
